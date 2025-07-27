@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios Unitarios-Bases de datos</title>
+    <link rel="stylesheet" href="/css/basesdedatos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('#basesdedatos h2, .card, footer, .section');
+    let ticking = false;
+
+    elements.forEach(element => {
+        element.style.transition = 'opacity 0.6s ease-out';
+    });
+
+    function updateOpacity() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calcular visibilidad (0 = fuera de vista, 1 = completamente visible)
+            const visibility = Math.min(1, 
+                Math.max(0, 
+                    (Math.min(rect.bottom, windowHeight) - 
+                    Math.max(rect.top, 0)) / rect.height
+                )
+            );
+            
+            // Aplicar opacidad con un mínimo de 0.2 cuando está casi fuera de vista
+            element.style.opacity = Math.max(0.2, visibility);
+        });
+        
+        ticking = false;
+    }
+
+    function handleScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateOpacity);
+            ticking = true;
+        }
+    }
+
+    // Configurar eventos
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    // Ejecutar inicialmente
+    updateOpacity();
+});
+</script>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg- fixed-top">
+  <div class="container-fluid">
+    <img src="../imgs/LOGOF.png" alt="Logo" class="logo" width="150" height="80">
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html#section2">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#section3">Nuestros Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#ultimosection">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/basesdedatos.html">Bases de Datos - Precios Unitarios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Servicios
+          </a>
+          <ul class="dropdown-menu desplegable">
+            <li><a class="dropdown-item" href="/html/servicios.html">Cuantificaciones de Obra - BIM</a></li>
+            <li><a class="dropdown-item" href="/html/servicios.html">Precios Unitarios</a></li>
+            <li><a class="dropdown-item" href="/html/servicios.html">Control de Obras</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#prueba">Prueba Gratuita</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+
+    
+
+
+
+
+    <section id="basesdedatos">
+      <h2 id="titulo">Bases de Datos - Precios Unitarios</h2>
+    <section id="tarjetas">
+
+        <div class="card">
+        <img src="../imgs/obrasciviles.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogo de Obras Civiles</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de sigmentaciones, elementos estructurales, albañilera y acabados. <br>Incluye Muros de retención, cimentaciones, Columnas, Vigas, Tensores, Acabados, metal mecánica.</p>
+    <p></br><b>Precio: </b>15,000.00 lps</p>
+  </div>
+  <p class="card__titleM">Catalogo de Obras Civiles</p>
+</div>
+
+
+
+
+
+
+ <div class="card">
+        <img src="../IMGS/terracerias.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Terracerias</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de cortes y excaciones masiva, rellenos, acarreos y alquiler de equipo pesado.<br>Incluye Cortes, Rellenos caminos de tierra, obras de paso y drenaje.
+
+</p>
+    <p></br><b>Precio: </b>12,000.00 lps</p>     
+  </div>
+  <p class="card__titleM">Catalogo de Terracerias</p>
+</div>
+
+
+
+
+ <div class="card">
+        <img src="/IMGS/climatizacion.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Climatización</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de sistemas HVAC, ductos, unidades manejadoras de aire, red de suministro, extraccion y refresco de aire.</p>
+  <p></br><b>Precio: </b>1000lps</p></div>
+  <p class="card__titleM">Catalogo de Climatizacion</p>
+  
+</div>
+
+
+ <div class="card">
+        <img src="/IMGS/instalacioneselectricas.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Instalaciones Electricas</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de circuitos electricos, tableros de distribucion, centros de carga, iluminacion, fuerza y dispositivo de control electrico.<br>Incluye iluminación, fuerza, dispositivos de control y mando.</p>
+  <p></br><b>Precio: </b>12,000.00 lps</p></div>
+  <p class="card__titleM">Catalogo de Instalaciones Electricas</p>
+  
+</div>
+
+
+
+ <div class="card">
+        <img src="/IMGS/proteccioncontraincendios.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Instalaciones de Proteccion Contra Incendios</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de redes de tuberia, sistemas de roseadores automaticos, estaciones de control y sistemas de presion.</p>
+    <p><b>Precio: </b>1000lps</p> 
+</div>
+  <p class="card__titleM">Proteccion Contra Incendios</p>
+  
+</div>
+
+
+ <div class="card">
+        <img src="../imgs/" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Sistemas de Electrificación en 138 Kv y 34.5 Kv</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de redes de distribucion areas y subterraneas, bancos de transformadores y capacitores.<br>Incluye Postes, Estructuras, Retenidas, Transformadores, protecciones eléctricas, Alumbrado público.</p>
+    <p></br><b>Precio: </b>15,000.00 lps</p>
+  </div>
+  <p class="card__titleM">Catalogo de Sistemas de Electrificación</p>
+
+</div>
+
+
+
+ <div class="card">
+        <img src="../imgs/hidrosanitarias.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Instalaciones Hidrosanitarias</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de tuberias de suministro, aparatos sanitarios, dispositivos de control de presion y sistemas de alamcenamiento y regulacion.<br>Incluye instalaciones de suministro de agua, drenaje sanitario, drenaje pluvial, aparatos sanitarios.</p>
+    <p></br><b>Precio: </b>10,000.00 lps</p>
+  </div>
+  <p class="card__titleM">Catalogo de Instalaciones Hidrosanitarias</p>
+</div>
+
+
+ <div class="card">
+        <img src="/IMGS/telecomunicaciones.png" height="300" width="310">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Telecomunicaciones</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de capa fisica de redes de voz y dato y su infraestructura asociada.</p>
+    <p></br><b>Precio: </b>1000lps</p>
+  </div>
+  <p class="card__titleM">Catalogo de Telecomunicaciones</p>
+</div>
+
+
+ <div class="card">
+        <img src="/IMGS/sanamineto.png" height="300" width="400">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Agua y Sanamiento</p>
+    <p class="card__description">Elabora presupuestos que incluyan partidas de segmentadores, filtros anaerobios y aerobios, campos de secado de lodos, PTAR por aereacion extendida y lodos activados.<br>Líneas de conducción de agua, Alcantarillado sanitario, alcantarillado pluvial, tratamiento básico de aguas residuales.</p>
+<p></br><b>Precio: </b>10,000.00 lps</p>  
+  </div>
+  <p class="card__titleM">Catalogo de Agua y Sanamiento</p>
+</div>
+
+ <div class="card">
+        <img src="../imgs/instalacionesmecanicas.png" height="300" width="400">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Instalaciones Mecanicas</p>
+    <p class="card__description">Incluye sistemas centralizados de Climatización, Ventilación forzada, Protección contra incendios, Transporte vertical, sistemas de bombeo.</p>
+<p></br><b>Precio: </b>15,000.00 lps</p>  
+  </div>
+  <p class="card__titleM">Catalogo de Instalaciones Mecanicas</p>
+</div>
+
+<div class="card">
+        <img src="/IMGS/sanamineto.png" height="300" width="400">  
+        <div class="card__content">
+    <p class="card__title">Catalogos de Instalaciones de Voz y Datos</p>
+    <p class="card__description">Incluye únicamente actividades asociadas a la capa física.</p>
+<p></br><b>Precio: </b>8,000.00 lps</p>  
+  </div>
+  <p class="card__titleM">Catalogo de Instalaciones de Voz y Datos</p>
+</div>
+
+
+
+
+
+
+    </section>
+
+
+    <section id="prueba" class="section">
+      <h2>Prueba Gratuita</h2>
+      <p>Para los interesados en nuestros servicios ofrecemos una prueba gratuita de nuestra base datos.</p>
+      <p>Para acceder a esta puede dar click en el boton o <a href="/src/archivodeprueba.txt" download="archivodeprueba.txt">presione aqui</a></p>
+       </section>
+
+       <section id="boto" class="section"><a href="../src/archivoprueba.txt" download="archivodeprueba.txt" id="boton">Descargar Prueba Gratuita</a>
+        
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+<footer class="footer">
+        <div class="footer-content">
+            <h3>Síguenos en redes</h3>
+            <p>Conéctate con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Precios Unitarios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</html>

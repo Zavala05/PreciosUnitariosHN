@@ -1,0 +1,240 @@
+header img{
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+nav{
+    position: fixed;
+}
+.navbar{
+    background-color: rgb(52, 76, 127);
+    
+    
+}
+
+.dropdown ul{
+  background-color: rgb(52, 76, 127);
+}
+
+.nav-item{
+    margin: 5px;
+    border-radius: 7px;
+    transition: all 0.4s ease;
+}
+
+.nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.571);
+    transition: all 0.4s ease;
+    border-radius: 7px;
+    color: black;
+}
+
+.navbar-nav li a{
+    color: rgb(255, 255, 255);
+}
+
+
+/*TARJETAS DE BASES DE DATOS*/
+h2{
+  
+  background-color: rgba(52, 76, 127, 0.872);
+  text-align: center;
+  margin: 20px;
+  border-radius: 2rem;
+  
+}
+
+#titulo{
+    color: rgba(255, 255, 255, 0.913);
+    
+}
+
+
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(52, 76, 127, 0.872);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+#tarjetas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 40px;
+}
+
+#basesdedatos{
+    margin-top: 120px;
+}
+
+#tarjetas{
+    margin-top: 40px;
+}
+
+
+/*PRUEBA*/
+
+#prueba{
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+ 
+  
+  
+}
+
+#boto{
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+#boton{
+  text-decoration: none;
+  background-color: #244052e0;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  margin-top: 20px;
+  
+  
+}
+
+#boton:hover{
+  background-color: #edededf7;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer {
+    background: #2c3e50; /* Color de fondo oscuro (puedes cambiarlo) */
+    color: #fff;
+    padding: 0.4rem 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Estilos de los íconos de redes */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Texto inferior */
+.footer-bottom {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}

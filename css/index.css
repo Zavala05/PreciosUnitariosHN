@@ -12,15 +12,19 @@ nav{
     
 }
 
+.dropdown ul{
+  background-color: rgb(52, 76, 127);
+}
 
 .nav-item{
     margin: 5px;
     border-radius: 7px;
+    transition: all 0.4s ease;
 }
 
 .nav-item:hover{
-    background-color: white;
-    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.571);
+    transition: all 0.4s ease;
     border-radius: 7px;
     color: black;
 }
@@ -56,6 +60,7 @@ nav{
   opacity: 1;
   filter: contrast(120%);
 }
+
 
 
 
@@ -344,7 +349,7 @@ nav{
 .footer {
     background: #2c3e50; /* Color de fondo oscuro (puedes cambiarlo) */
     color: #fff;
-    padding: 2rem 0;
+    padding: 0.4rem 0;
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
