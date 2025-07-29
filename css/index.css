@@ -139,6 +139,10 @@ nav{
 
 /*segunda seccion*/
 
+#textotarjeta{
+  justify-content: left;
+  text-align: left;
+}
 
 #section2{
     display: flex;
@@ -550,5 +554,14 @@ nav{
 @media (min-width: 1400px){
     .card{
       width: 600px;
+      
+    }
+
+    .img{
+      height: 390px;
+    }
+
+    .textBox{
+    height: 285px;
     }
 }
