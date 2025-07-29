@@ -47,6 +47,7 @@ nav{
 }
 
 
+
 #carrusel img{
   width: 0px;
   flex-grow: 1;
@@ -108,15 +109,22 @@ nav{
   margin: 2rem;
   text-align: center;
   margin-top: 5rem;
- 
+  
+}
 
-  
-  
+#textonoostros{
+  justify-content: left;
+  text-align: left;
 }
 
 #Servicios{
   margin: 2rem;
   text-align: center;
+}
+
+#puntosservicios{
+  justify-content: left;
+  text-align: left;
 }
 
 #Servicios p{
@@ -536,4 +544,11 @@ nav{
     
 
 
+}
+
+
+@media (min-width: 1400px){
+    .card{
+      width: 600px;
+    }
 }
