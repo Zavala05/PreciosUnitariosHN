@@ -538,7 +538,7 @@ nav{
 
 @media (max-width: 325px) {
     #carrusel{
-      width: 260px;
+      width: 257px;
     }
     .parentcarrusel .div1{
       margin-top: 5px;
@@ -571,3 +571,4 @@ nav{
     height: 285px;
     }
 }
+
