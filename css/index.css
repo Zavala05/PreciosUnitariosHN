@@ -1,7 +1,12 @@
 
 header img{
-    border-radius: 4px;
-    margin-right: 40px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #fff;
+    margin-right: 12px;
 }
 
 nav{
